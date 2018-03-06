@@ -75,6 +75,9 @@ class SparkContext(config: SparkConf) extends Logging {
   // The call site where this SparkContext was constructed.
   private val creationSite: CallSite = Utils.getCallSite()
 
+  //Edit: Tanmaya Tripathi
+  println("Spark Context getting triggered at this point")
+  
   // If true, log warnings instead of throwing exceptions when multiple SparkContexts are active
   private val allowMultipleContexts: Boolean =
     config.getBoolean("spark.driver.allowMultipleContexts", false)
